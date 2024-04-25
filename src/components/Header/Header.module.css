@@ -1,0 +1,11 @@
+header {
+  background-color: rgb(179, 182, 184);
+}
+
+.logo {
+  margin-left: 40px;
+  padding: 20px 0 30px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
