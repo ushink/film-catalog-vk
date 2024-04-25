@@ -9,11 +9,3 @@ header {
   font-weight: bold;
 }
 
-a {
-  color: azure;
-  text-decoration: none;
-}
-
-a:hover {
-  color: blue;
-}
