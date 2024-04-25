@@ -1,5 +1,11 @@
+import { Header } from "../../components/Header/Header";
 import s from "./NotFound.module.css";
 
 export function NotFound() {
-  return <div className={s.main}>NotFound 404</div>;
+  return (
+    <>
+      <Header />
+      <div className={s.main}>NotFound 404</div>
+    </>
+  );
 }
