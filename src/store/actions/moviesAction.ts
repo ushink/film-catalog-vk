@@ -10,7 +10,6 @@ export const fetchMovies = () => {
       const response = await axios.get<ServerResponse<IMovies>>(
         `trending/movie/week?api_key=${apiKey}&page=1`
       );
-      console.log(response.data.results);
 
       dispatch(setMovies(response.data.results));
       
