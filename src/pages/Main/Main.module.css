@@ -8,6 +8,13 @@
   flex-grow: 1;
 }
 
+.loading{
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  color: #ffffff;
+}
+
 .container {
   display: inline-block;
   width: 200px;
