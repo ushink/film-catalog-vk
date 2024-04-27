@@ -19,7 +19,9 @@ export function Main() {
     <>
       <Header />
       <main className={s.main}>
-        {!movies.length && <div className={s.loading}>Loading... Check you VPN connection</div>}
+        {!movies.length && (
+          <div className={s.loading}>Loading... Check you VPN connection</div>
+        )}
         {movies.map((el) => (
           <Link to={`film/${el.id}`} key={el.id} className={s.container}>
             <img
@@ -27,7 +29,9 @@ export function Main() {
               src={`https://image.tmdb.org/t/p/w300/${el.poster_path}`}
               alt={el.title}
             />
-            <span className={s.title}>{el.original_title}</span>
+            <span className={s.title}>
+              {el.original_title ? el.original_title : el.title}
+            </span>
           </Link>
         ))}
       </main>
