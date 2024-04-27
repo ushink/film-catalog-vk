@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Header } from "../../components/Header/Header";
 import s from "./Main.module.css";
-import { films } from "../../mock/filmsData";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { useEffect } from "react";
 import { fetchMovies } from "../../store/actions/moviesAction";
