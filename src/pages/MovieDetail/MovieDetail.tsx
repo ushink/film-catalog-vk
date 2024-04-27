@@ -14,15 +14,27 @@ export function MovieDetail() {
 
   useEffect(() => {
     if (id) {
-      dispatch(fetchFilm(id))
+      dispatch(fetchFilm(id));
     }
   }, []);
 
-  console.log('film',film);
   return (
     <>
       <Header />
-      <div className={s.main}>Film Detail</div>
+      <main className={s.main}>
+        {!film && (
+          <div className={s.loading}>Loading... Check you VPN connection</div>
+        )}
+        <img
+          className={s.img}
+          src={`https://image.tmdb.org/t/p/w500/${film?.poster_path}`}
+          alt={film?.title}
+        />
+        <div className={s.textBox}>
+          <p className={s.title}>{film?.title}</p>
+          <p className={s.overview}>{film?.overview}</p>
+        </div>
+      </main>
     </>
   );
 }

@@ -25,9 +25,8 @@ export const fetchFilm = (id: string) => {
       const response = await axios.get<IMovieDetail>(
         `movie/${id}?api_key=${apiKey}`
       );
-      dispatch(setFilm(response.data));
 
-      console.log(response);
+      dispatch(setFilm(response.data));
     } catch (e) {
       console.log(e);
     }
