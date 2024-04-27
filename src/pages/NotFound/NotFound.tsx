@@ -5,7 +5,7 @@ export function NotFound() {
   return (
     <>
       <Header />
-      <div className={s.main}>NotFound 404</div>
+      <main className={s.main}>NotFound 404</main>
     </>
   );
 }

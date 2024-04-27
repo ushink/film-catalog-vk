@@ -1,3 +1,37 @@
 .main {
-  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 100px;
+  background-color: black;
+}
+
+.loading {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.textBox {
+  max-width: 400px;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
+
+.title,
+.overview {
+  font-style: normal;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.title {
+  font-size: 26px;
+}
+
+.overview {
+  font-size: 18px;
 }
