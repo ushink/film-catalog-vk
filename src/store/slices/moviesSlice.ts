@@ -1,12 +1,14 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { IMovies } from "../../models/models";
+import { IMovieDetail, IMovies } from "../../models/models";
 
 interface MoviesState {
   movies: IMovies[];
+  film: IMovieDetail | null;
 }
 
 const initialState: MoviesState = {
   movies: [],
+  film: null
 };
 
 export const moviesSlice = createSlice({
@@ -17,9 +19,13 @@ export const moviesSlice = createSlice({
     setMovies: (state, action: PayloadAction<IMovies[]>) => {
       state.movies = action.payload;
     },
+
+    setFilm: (state, action: PayloadAction<IMovieDetail>) => {
+      state.film = action.payload;
+    },
   },
 });
 
-export const { setMovies } = moviesSlice.actions;
+export const { setMovies, setFilm } = moviesSlice.actions;
 
 export default moviesSlice.reducer;
